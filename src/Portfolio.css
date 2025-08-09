@@ -1,0 +1,1316 @@
+/*
+  This file contains all the custom CSS rules to replicate the Tailwind design.
+  It is a direct conversion from the Tailwind utility classes to standard CSS.
+*/
+
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  color: #333;
+  background-color: #f3f4f6;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.font-cursive {
+ 
+    font-weight: 700;
+  font-family: 'Rouge Script', cursive;
+}
+.section-title{
+      font-weight: 700;
+  font-family: 'Rouge Script', cursive;
+
+}
+.main-content {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5rem;
+  padding-bottom: 6rem;
+  padding-top: 6rem;
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    padding: 3rem;
+  }
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #164659;
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.icon-white {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: white;
+}
+
+/* Color Palette */
+.bg-color-1 { background-color: #164659; }
+.bg-color-2 { background-color: #297893; }
+.bg-color-3 { background-color: #5598ac; }
+
+.text-color-1 { color: #164659; }
+.text-color-2 { color: #297893; }
+
+.skill-badge-1 {
+  background-color: #e1e9ed;
+  color: #164659;
+}
+
+.skill-badge-2 {
+  background-color: #164659;
+  color: white;
+}
+
+
+/* Typewriter */
+.typewriter-text {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #164659;
+}
+
+@media (min-width: 768px) {
+  .typewriter-text {
+    font-size: 3rem;
+  }
+}
+
+.typewriter-cursor {
+  display: inline-block;
+  vertical-align: top;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* background-color: rgba(255, 255, 255, 0.9); */
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  /* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); */
+  z-index: 50;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-family: 'Dancing Script', cursive;
+  color: #164659;
+  text-decoration: none;
+}
+
+.navbar-desktop-menu {
+  display: none;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .navbar-desktop-menu {
+    display: flex;
+  }
+}
+
+.nav-link {
+  position: relative;
+  color: #4b5563;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+  padding-bottom: 4px;
+}
+
+.nav-link:hover {
+  color: #164659;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background-color: #164659;
+  width: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+  width: 100%;
+}
+
+.navbar-mobile-button {
+  display: block;
+  color: #4b5563;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .navbar-mobile-button {
+    display: none;
+  }
+}
+
+.navbar-mobile-button:focus {
+  outline: none;
+  color: #164659;
+}
+
+.navbar-mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.navbar-mobile-menu.open {
+  max-height: 24rem;
+}
+
+.navbar-mobile-items {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+
+.mobile-link {
+  padding: 0.5rem 0;
+  font-size: 1.125rem;
+  color: #1f2937;
+  border-bottom: 1px solid #e5e7eb;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.mobile-link:last-child {
+  border-bottom: none;
+}
+
+.mobile-link:hover {
+  color: #164659;
+}
+
+.mobile-link.active {
+  color: #164659;
+  font-weight: 700;
+}
+
+
+/* --- Intro Section --- */
+.intro-header {
+background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  
+  padding: 6rem 2rem;
+  margin-bottom: 3rem;
+  margin-top: 4rem;
+}
+
+@media (min-width: 768px) {
+  .intro-header {
+    padding: 6rem 3rem;
+  }
+}
+
+.intro-content-wrapper {
+  max-width: 64rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .intro-content-wrapper {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    gap: 2rem;
+  }
+}
+
+.intro-text-column {
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .intro-text-column {
+    flex: 1;
+    margin-bottom: 0;
+  }
+}
+
+.intro-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  font-family: 'Dancing Script', cursive;
+  margin-bottom: 1rem;
+  color: #164659;
+}
+
+@media (min-width: 768px) {
+  .intro-title {
+    font-size: 3rem;
+  }
+}
+
+.intro-subtitle {
+  font-size: 1.125rem;
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .intro-subtitle {
+    font-size: 1.25rem;
+  }
+}
+
+.intro-social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .intro-social-links {
+    justify-content: flex-start;
+  }
+}
+
+.social-link {
+  color: #4b5563;
+  transition: color 0.2s;
+}
+
+.social-link:hover {
+  color: #164659;
+}
+
+.social-link .icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.intro-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .intro-actions {
+    justify-content: flex-start;
+  }
+}
+
+.action-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 2px solid #164659;
+  color: #164659;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: color 0.3s;
+  text-decoration: none;
+  min-width: 140px;
+}
+
+.action-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: #164659;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+  z-index: 0;
+}
+
+.action-button:hover::before {
+  transform: scaleX(1);
+}
+
+.action-button span {
+  position: relative;
+  z-index: 10;
+}
+
+.action-button:hover {
+  color: white;
+}
+
+
+.intro-image-column {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .intro-image-column {
+    flex: 1;
+    justify-content: flex-end;
+  }
+}
+
+.profile-image {
+  width: 70%;
+  height: auto;
+  max-width: 20rem; /* Adjust this value as needed for the desired image size on mobile */
+  object-fit: cover;
+  /* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); */
+}
+
+@media (min-width: 768px) {
+  .profile-image {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    /* aspect-ratio: 1 / 1; */
+  }
+}
+
+
+/* Timeline */
+.timeline-section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.timeline-container {
+  position: relative;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background-color: #e1e9ed;
+}
+
+.timeline-item {
+  display: flex;
+  width: 100%;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .timeline-item {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.timeline-item-left {
+  flex-direction: row;
+}
+
+.timeline-item-right {
+  flex-direction: row-reverse;
+}
+
+.timeline-card {
+  width: 100%;
+  padding: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  background-color: white;
+  position: relative;
+  z-index: 10;
+  transition: transform 0.3s;
+  border-radius: 0.25rem;
+}
+
+.timeline-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.timeline-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  z-index: 20;
+}
+
+.timeline-icon-circle {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  border: 4px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.timeline-icon-svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: white;
+}
+
+.timeline-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.timeline-card-subtitle {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.timeline-card-date {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.timeline-date-icon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.25rem;
+}
+
+.timeline-card-description {
+  color: #4b5563;
+  line-height: 1.625;
+  margin-bottom: 1rem;
+}
+
+.timeline-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.timeline-skill-badge {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  text-transform: uppercase;
+}
+
+/* Skills */
+.skills-section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.skills-container {
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skills-tabs-header {
+  display: flex;
+  border-bottom: 1px solid #d1d5db;
+  margin-bottom: 1rem;
+}
+
+.skills-tab-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: color 0.2s;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  color: #4b5563;
+}
+
+.skills-tab-button:hover {
+  color: #164659;
+}
+
+.skills-tab-button.active {
+  color: #164659;
+  background-color: white;
+  border-bottom-color: #164659;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+
+.skills-content {
+  background-color: white;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1.5rem;
+}
+
+.skills-badge {
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: transform 0.2s;
+}
+
+.skills-badge:hover {
+  transform: scale(1.05);
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.4s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Projects */
+.projects-section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.projects-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  background-color: white;
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.1);
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(22, 70, 89, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .project-title {
+    font-size: 1.5rem;
+  }
+}
+
+.project-description {
+  font-size: 0.875rem;
+  text-align: center;
+  line-height: 1.625;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .project-description {
+    font-size: 1rem;
+  }
+}
+
+.project-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-button {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.875rem;
+  background-color: white;
+  color: #164659;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: background-color 0.2s;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .project-button {
+    font-size: 1rem;
+  }
+}
+
+.project-button:hover {
+  background-color: #e5e7eb;
+}
+
+.project-button .icon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+}
+
+.project-github {
+  color: #4b5563;
+}
+
+
+/* Certifications */
+.certifications-section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.certifications-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .certifications-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .certifications-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.certification-card {
+  background-color: white;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s;
+}
+
+.certification-card:hover {
+  transform: scale(1.05);
+}
+
+.certification-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.certification-icon-wrapper {
+  padding: 0.75rem;
+  margin-right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.certification-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #164659;
+}
+
+.certification-organization {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.certification-description {
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.certification-date {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-top: auto;
+}
+
+.certification-date .icon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.25rem;
+}
+
+
+/* Contact */
+.contact-footer {
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .contact-footer {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+.contact-subtitle {
+  font-size: 1.125rem;
+  color: #4b5563;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .contact-subtitle {
+    font-size: 1.25rem;
+  }
+}
+
+.email-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: #164659;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.2s;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+}
+
+.email-button:hover {
+  background-color: #10313e;
+}
+
+.email-button .icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.5rem;
+}
+
+.contact-social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/*======================= Home- bubble background animation=====================*/
+#background-wrap {
+  bottom: 0;
+left: 0;
+position: fixed;
+right: 0;
+top: 0;
+z-index: -1;
+}
+
+/* KEYFRAMES */
+
+@-webkit-keyframes animateBubble {
+  0% {
+      margin-top: 1000px;
+  }
+  100% {
+      margin-top: -100%;
+  }
+}
+
+@-moz-keyframes animateBubble {
+  0% {
+      margin-top: 1000px;
+  }
+  100% {
+      margin-top: -100%;
+  }
+}
+
+@keyframes animateBubble {
+  0% {
+      margin-top: 1000px;
+  }
+  100% {
+      margin-top: -100%;
+  }
+}
+
+@-webkit-keyframes sideWays { 
+  0% { 
+      margin-left:0px;
+  }
+  100% { 
+      margin-left:50px;
+  }
+}
+
+@-moz-keyframes sideWays { 
+  0% { 
+      margin-left:0px;
+  }
+  100% { 
+      margin-left:50px;
+  }
+}
+
+@keyframes sideWays { 
+  0% { 
+      margin-left:0px;
+  }
+  100% { 
+      margin-left:50px;
+  }
+}
+
+/* ANIMATIONS */
+.x1 {
+  -webkit-animation: animateBubble 25s linear infinite, sideWays 1s ease-in-out infinite alternate;
+-moz-animation: animateBubble 25s linear infinite, sideWays 1s ease-in-out infinite alternate;
+animation: animateBubble 25s linear infinite, sideWays 1s ease-in-out infinite alternate;
+
+left: -5%;
+top: 5%;
+
+-webkit-transform: scale(0.6);
+-moz-transform: scale(0.6);
+transform: scale(0.6);
+}
+
+.x2 {
+  -webkit-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
+-moz-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
+animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
+
+left: 5%;
+top: 80%;
+
+-webkit-transform: scale(0.4);
+-moz-transform: scale(0.4);
+transform: scale(0.4);
+}
+
+.x3 {
+  -webkit-animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
+-moz-animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
+animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
+
+left: 10%;
+top: 40%;
+
+-webkit-transform: scale(0.7);
+-moz-transform: scale(0.7);
+transform: scale(0.7);
+}
+
+.x4 {
+  -webkit-animation: animateBubble 22s linear infinite, sideWays 2s ease-in-out infinite alternate;
+-moz-animation: animateBubble 22s linear infinite, sideWays 2s ease-in-out infinite alternate;
+animation: animateBubble 22s linear infinite, sideWays 2s ease-in-out infinite alternate;
+
+left: 20%;
+top: 0;
+
+-webkit-transform: scale(0.3);
+-moz-transform: scale(0.3);
+transform: scale(0.3);
+}
+
+.x5 {
+  -webkit-animation: animateBubble 29s linear infinite, sideWays 2s ease-in-out infinite alternate;
+-moz-animation: animateBubble 29s linear infinite, sideWays 2s ease-in-out infinite alternate;
+animation: animateBubble 29s linear infinite, sideWays 2s ease-in-out infinite alternate;
+
+left: 30%;
+top: 50%;
+
+-webkit-transform: scale(0.5);
+-moz-transform: scale(0.5);
+transform: scale(0.5);
+}
+
+.x6 {
+  -webkit-animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
+-moz-animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
+animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
+
+left: 50%;
+top: 0;
+
+-webkit-transform: scale(0.8);
+-moz-transform: scale(0.8);
+transform: scale(0.8);
+}
+
+.x7 {
+  -webkit-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
+-moz-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
+animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
+
+left: 65%;
+top: 70%;
+
+-webkit-transform: scale(0.4);
+-moz-transform: scale(0.4);
+transform: scale(0.4);
+}
+
+.x8 {
+  -webkit-animation: animateBubble 22s linear infinite, sideWays 1.5s ease-in-out infinite alternate;
+-moz-animation: animateBubble 22s linear infinite, sideWays 1.5s ease-in-out infinite alternate;
+animation: animateBubble 22s linear infinite, sideWays 1.5s ease-in-out infinite alternate;
+
+left: 60%;
+top: 10%;
+
+-webkit-transform: scale(0.3);
+-moz-transform: scale(0.3);
+transform: scale(0.3);
+}
+
+.x13 {
+  -webkit-animation: animateBubble 22s linear infinite, sideWays 2s ease-in-out infinite alternate;
+-moz-animation: animateBubble 22s linear infinite, sideWays 2s ease-in-out infinite alternate;
+animation: animateBubble 22s linear infinite, sideWays 2s ease-in-out infinite alternate;
+
+left: 80%;
+top: 10%;
+
+-webkit-transform: scale(0.4);
+-moz-transform: scale(0.4);
+transform: scale(0.4);
+}
+
+
+
+.x9 {
+  -webkit-animation: animateBubble 29s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	-moz-animation: animateBubble 29s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	animation: animateBubble 29s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	
+	left: 90%;
+	top: 50%;
+	
+	-webkit-transform: scale(0.6);
+	-moz-transform: scale(0.6);
+	transform: scale(0.6);
+}
+
+.x10 {
+  -webkit-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+-moz-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+
+left: 80%;
+top: 50%;
+
+-webkit-transform: scale(0.3);
+-moz-transform: scale(0.3);
+transform: scale(0.3);
+}
+
+.x12 {
+  -webkit-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+-moz-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+left: 75%;
+top: 10%;
+-webkit-transform: scale(0.8);
+-moz-transform: scale(0.8);
+transform: scale(0.8);
+}
+
+
+.x11 {
+  -webkit-animation: animateBubble 29s linear infinite, sideWays 2s ease-in-out infinite alternate;
+-moz-animation: animateBubble 29s linear infinite, sideWays 2s ease-in-out infinite alternate;
+animation: animateBubble 29s linear infinite, sideWays 2s ease-in-out infinite alternate;
+left: 30%;
+top: 70%;
+-webkit-transform: scale(0.5);
+-moz-transform: scale(0.5);
+transform: scale(0.5);
+}
+
+.x14 {
+  -webkit-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
+-moz-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
+animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
+left: 40%;
+top: 50%;
+-webkit-transform: scale(0.8);
+-moz-transform: scale(0.8);
+transform: scale(0.8);
+}
+.x15 {
+  -webkit-animation: animateBubble 40s linear infinite, sideWays 4s ease-in-out infinite alternate;
+-moz-animation: animateBubble 40s linear infinite, sideWays 4s ease-in-out infinite alternate;
+animation: animateBubble 40s linear infinite, sideWays 4s ease-in-out infinite alternate;
+left: 50%;
+top: 50%;
+-webkit-transform: scale(0.8);
+-moz-transform: scale(0.8);
+transform: scale(0.8);
+}
+
+.x16 {
+  -webkit-animation: animateBubble 40s linear infinite, sideWays 4s ease-in-out infinite alternate;
+-moz-animation: animateBubble 40s linear infinite, sideWays 4s ease-in-out infinite alternate;
+animation: animateBubble 40s linear infinite, sideWays 4s ease-in-out infinite alternate;
+left: 17%;
+top: 70%;
+-webkit-transform: scale(0.8);
+-moz-transform: scale(0.8);
+transform: scale(0.8);
+}
+.x17 {
+  -webkit-animation: animateBubble 40s linear infinite, sideWays 4s ease-in-out infinite alternate;
+-moz-animation: animateBubble 40s linear infinite, sideWays 4s ease-in-out infinite alternate;
+animation: animateBubble 40s linear infinite, sideWays 4s ease-in-out infinite alternate;
+left: 80%;
+top: 50%;
+-webkit-transform: scale(0.8);
+-moz-transform: scale(0.8);
+transform: scale(0.8);
+}
+.x18 {
+  -webkit-animation: animateBubble 40s linear infinite, sideWays 4s ease-in-out infinite alternate;
+-moz-animation: animateBubble 40s linear infinite, sideWays 4s ease-in-out infinite alternate;
+animation: animateBubble 40s linear infinite, sideWays 4s ease-in-out infinite alternate;
+left: 60%;
+top: 35%;
+-webkit-transform: scale(0.8);
+-moz-transform: scale(0.8);
+transform: scale(0.8);
+}
+.x19 {
+  -webkit-animation: animateBubble 40s linear infinite, sideWays 4s ease-in-out infinite alternate;
+-moz-animation: animateBubble 40s linear infinite, sideWays 4s ease-in-out infinite alternate;
+animation: animateBubble 40s linear infinite, sideWays 4s ease-in-out infinite alternate;
+left: 34%;
+top: 78%;
+-webkit-transform: scale(0.4);
+-moz-transform: scale(0.4);
+transform: scale(0.4);
+}
+.x20 {
+  -webkit-animation: animateBubble 40s linear infinite, sideWays 4s ease-in-out infinite alternate;
+-moz-animation: animateBubble 40s linear infinite, sideWays 4s ease-in-out infinite alternate;
+animation: animateBubble 40s linear infinite, sideWays 4s ease-in-out infinite alternate;
+left: 30%;
+top: 45%;
+-webkit-transform: scale(0.5);
+-moz-transform: scale(0.5);
+transform: scale(0.5);
+}
+.x21 {
+  -webkit-animation: animateBubble 12s linear infinite, sideWays 1s ease-in-out infinite alternate;
+-moz-animation: animateBubble 12s linear infinite, sideWays 1s ease-in-out infinite alternate;
+animation: animateBubble 12s linear infinite, sideWays 1s ease-in-out infinite alternate;
+
+left: -5%;
+top: 5%;
+
+-webkit-transform: scale(0.15);
+-moz-transform: scale(0.15);
+transform: scale(0.15);
+}
+.x22 {
+  -webkit-animation: animateBubble 12s linear infinite, sideWays 1s ease-in-out infinite alternate;
+-moz-animation: animateBubble 12s linear infinite, sideWays 1s ease-in-out infinite alternate;
+animation: animateBubble 12s linear infinite, sideWays 1s ease-in-out infinite alternate;
+
+left: 20%;
+top: 15%;
+
+-webkit-transform: scale(0.5);
+-moz-transform: scale(0.5);
+transform: scale(0.5);
+}
+.x23 {
+  -webkit-animation: animateBubble 12s linear infinite, sideWays 3s ease-in-out infinite alternate;
+-moz-animation: animateBubble 12s linear infinite, sideWays 3s ease-in-out infinite alternate;
+animation: animateBubble 12s linear infinite, sideWays 3s ease-in-out infinite alternate;
+
+left: 55%;
+top: 75%;
+
+-webkit-transform: scale(0.5);
+-moz-transform: scale(0.5);
+transform: scale(0.5);
+}
+.x24 {
+  -webkit-animation: animateBubble 12s linear infinite, sideWays 3s ease-in-out infinite alternate;
+-moz-animation: animateBubble 12s linear infinite, sideWays 3s ease-in-out infinite alternate;
+animation: animateBubble 12s linear infinite, sideWays 3s ease-in-out infinite alternate;
+
+left: 29%;
+top: 85%;
+
+-webkit-transform: scale(0.5);
+-moz-transform: scale(0.5);
+transform: scale(0.5);
+}
+.x25 {
+  -webkit-animation: animateBubble 12s linear infinite, sideWays 3s ease-in-out infinite alternate;
+-moz-animation: animateBubble 12s linear infinite, sideWays 3s ease-in-out infinite alternate;
+animation: animateBubble 12s linear infinite, sideWays 3s ease-in-out infinite alternate;
+
+left: 19%;
+top: 85%;
+
+-webkit-transform: scale(0.5);
+-moz-transform: scale(0.5);
+transform: scale(0.5);
+}
+
+/* OBJECTS */
+.bubble {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+  -moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+  height: 200px;
+  position: absolute;
+  width: 200px;
+}
+
+
+.bubble:after {
+  background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 70%); 
+  background: -webkit-gradien(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,0.5)), color-stop(70%,rgba(255,255,255,0))); 
+  background: -webkit-radial-gradient(center, ellipse cover, #164659 0%,rgba(255,255,255,0) 70%); 
+  background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%);
+  background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#00ffffff',GradientType=1 ); 
+-webkit-border-radius: 50%;
+-moz-border-radius: 50%;
+ border-radius: 50%;
+
+-webkit-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.8);
+-moz-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.8);
+ box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.8);
+
+content: "";
+height: 180px;
+left: 10px;
+position: absolute;
+width: 180px;
+} 
+/* ================================================================================================================ */
