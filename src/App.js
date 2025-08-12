@@ -171,10 +171,10 @@ const Intro = () => (
         <p className="intro-subtitle">Love for learning is endless!</p>
         
         <div className="intro-social-links">
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-link">
+          <a href="https://www.linkedin.com/in/sandhiya-kumar18/" target="_blank" rel="noopener noreferrer" className="social-link">
             <Linkedin className="icon" />
           </a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="social-link">
+          <a href="https://github.com/SandhiyaKumar-18" target="_blank" rel="noopener noreferrer" className="social-link">
             <Github className="icon" />
           </a>
           <a href="mailto:ksandhiya484@gmail.com" className="social-link">
@@ -382,8 +382,8 @@ const projectsData = [
     title: 'Nutrition Anayzer',
     description: ' Developed a Nutrition Analyzer web app using Flask and CNN, classifying fruits from images and providing real-time nutritional data for fitness enthusiasts to improve dietary decisions',
 
-    link: '#',
-    github: '#',
+    link: 'https://www.youtube.com/watch?v=rr25J_hu1L8',
+    github: 'https://github.com/SandhiyaKumar-18/Nutrition-Analyzer',
      image: 'https://placehold.co/600x400/164659/e1e9ed?text=Nutrition+Analyzer',
   },
   {
