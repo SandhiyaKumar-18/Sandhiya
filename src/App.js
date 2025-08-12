@@ -230,11 +230,11 @@ const experienceData = [
   },
   {
     id: 3,
-    title: 'Professional Certification',
-    company: 'Coursera',
-    date: 'Jan 2023',
-    description: 'Completed a professional certification in cybersecurity, expanding knowledge on key principles and best practices.',
-    skills: ['Network Security', 'Cryptography', 'Risk Management'],
+    title: 'Digital Nurture Program',
+    company: 'Cognizant',
+    date: 'Jun 2022',
+    description: 'Participated in Cognizant Digital Nurture 2.0, specializing in full-stack development with exposure to cybersecurity concepts, completing deep-skilling, coding assessments, and collaborative projects aligned with GenC Next standards and industry best practices.',
+    skills: ['Cyber Security Fundamnetals', 'Java', 'SQL'],
     icon: 'award',
     color: 'bg-color-3'
   },
