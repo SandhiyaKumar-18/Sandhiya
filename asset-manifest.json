@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Sandhiya/static/css/main.008a924b.css",
+    "main.js": "/Sandhiya/static/js/main.b5d5890c.js",
+    "static/js/453.a05f7ff5.chunk.js": "/Sandhiya/static/js/453.a05f7ff5.chunk.js",
+    "static/media/image.png": "/Sandhiya/static/media/image.4ddbcd83c80bfc6a4432.png",
+    "index.html": "/Sandhiya/index.html",
+    "main.008a924b.css.map": "/Sandhiya/static/css/main.008a924b.css.map",
+    "main.b5d5890c.js.map": "/Sandhiya/static/js/main.b5d5890c.js.map",
+    "453.a05f7ff5.chunk.js.map": "/Sandhiya/static/js/453.a05f7ff5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.008a924b.css",
+    "static/js/main.b5d5890c.js"
+  ]
+}
