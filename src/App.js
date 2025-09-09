@@ -2,6 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { Briefcase, Calendar, Award, GraduationCap, Code, Globe, Github, Linkedin, Mail, Shield, Zap, Terminal, GitBranch, Cloud, Server, Menu, X } from 'lucide-react';
 import './Portfolio.css'; // Importing the new CSS file
 import './image.png'
+import zentry from '../src/Zentry-IGA.png'
+import PPimage from '../src/PublicPulse-PlaceHolder.png'
+import NZimage from '../src/NZimage.png'
+
+
 
 // Main App component that renders all sections of the portfolio.
 export default function App() {
@@ -384,7 +389,7 @@ const projectsData = [
 
     link: 'https://www.youtube.com/watch?v=rr25J_hu1L8',
     github: 'https://github.com/SandhiyaKumar-18/Nutrition-Analyzer',
-     image: 'https://placehold.co/600x400/164659/e1e9ed?text=Nutrition+Analyzer',
+     image: NZimage
   },
   {
     id: 2,
@@ -392,15 +397,15 @@ const projectsData = [
     description: 'A Python script that automates the process of scanning and detecting common network vulnerabilities.',
     link: '#',
     github: '#',
-    image: 'https://placehold.co/600x400/297893/e1e9ed?text=Public+Pulse'
+    image: PPimage
   },
   {
     id: 3,
-    title: 'DashBoard',
+    title: 'Zentry-IGA',
     description: 'The very website you are viewing! Built with React for a modern, responsive design.',
     link: '#',
     github: '#',
-    image: 'https://placehold.co/600x400/5598ac/e1e9ed?text=Dashboard'
+    image: zentry
   },
 ];
 
