@@ -1,16 +1,19 @@
 {
   "files": {
-    "main.css": "/Sandhiya/static/css/main.3d9fc41c.css",
-    "main.js": "/Sandhiya/static/js/main.812ffae4.js",
+    "main.css": "/Sandhiya/static/css/main.35a66ca5.css",
+    "main.js": "/Sandhiya/static/js/main.d942bbfa.js",
     "static/js/453.a05f7ff5.chunk.js": "/Sandhiya/static/js/453.a05f7ff5.chunk.js",
     "static/media/image.png": "/Sandhiya/static/media/image.4ddbcd83c80bfc6a4432.png",
+    "static/media/NZimage.png": "/Sandhiya/static/media/NZimage.9e45e72f66e46fe5c541.png",
+    "static/media/Zentry-IGA.png": "/Sandhiya/static/media/Zentry-IGA.e77eed7daea73e9cbac8.png",
+    "static/media/PublicPulse-PlaceHolder.png": "/Sandhiya/static/media/PublicPulse-PlaceHolder.b495d74ff70ab1bcb96b.png",
     "index.html": "/Sandhiya/index.html",
-    "main.3d9fc41c.css.map": "/Sandhiya/static/css/main.3d9fc41c.css.map",
-    "main.812ffae4.js.map": "/Sandhiya/static/js/main.812ffae4.js.map",
+    "main.35a66ca5.css.map": "/Sandhiya/static/css/main.35a66ca5.css.map",
+    "main.d942bbfa.js.map": "/Sandhiya/static/js/main.d942bbfa.js.map",
     "453.a05f7ff5.chunk.js.map": "/Sandhiya/static/js/453.a05f7ff5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3d9fc41c.css",
-    "static/js/main.812ffae4.js"
+    "static/css/main.35a66ca5.css",
+    "static/js/main.d942bbfa.js"
   ]
 }
