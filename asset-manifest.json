@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Sandhiya/static/css/main.dad20011.css",
-    "main.js": "/Sandhiya/static/js/main.b1180731.js",
+    "main.js": "/Sandhiya/static/js/main.6ebc2173.js",
     "static/js/453.a05f7ff5.chunk.js": "/Sandhiya/static/js/453.a05f7ff5.chunk.js",
     "static/media/image.png": "/Sandhiya/static/media/image.4ddbcd83c80bfc6a4432.png",
     "static/media/NZimage.png": "/Sandhiya/static/media/NZimage.9e45e72f66e46fe5c541.png",
@@ -9,11 +9,11 @@
     "static/media/PublicPulse-PlaceHolder.png": "/Sandhiya/static/media/PublicPulse-PlaceHolder.b495d74ff70ab1bcb96b.png",
     "index.html": "/Sandhiya/index.html",
     "main.dad20011.css.map": "/Sandhiya/static/css/main.dad20011.css.map",
-    "main.b1180731.js.map": "/Sandhiya/static/js/main.b1180731.js.map",
+    "main.6ebc2173.js.map": "/Sandhiya/static/js/main.6ebc2173.js.map",
     "453.a05f7ff5.chunk.js.map": "/Sandhiya/static/js/453.a05f7ff5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dad20011.css",
-    "static/js/main.b1180731.js"
+    "static/js/main.6ebc2173.js"
   ]
 }
